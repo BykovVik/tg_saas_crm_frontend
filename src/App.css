@@ -1,18 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #ffffff;
+}
+a {
+    text-decoration: none;
 }
 input, textarea {
     display: block;
     margin-bottom: 5px;
     border: none;
+    border-radius: 5px;
     background-color: #efefef;
-    width: 100%;
+    padding: 2%;
+    width: 96%;
+}
+input:focus, textarea:focus {
+    outline: 2px solid #fa8c82;
+}
+nav {
+    background-color: #e64c43;
+    padding: 20px;
+    padding-bottom: 0;
+}
+nav > a {
+    padding: 15px;
+    padding-bottom: 1px;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+}
+nav > a:focus {
+    background-color: #ffffff;
+    color: black;
 }
 .page {
     display: flex;
     height: calc(var(--vh, 1vh) * 90);
-    justify-content: center;
 }
 .pageBox {
+    flex: 1;
     align-self: center;
+    padding: 15px;
 }
