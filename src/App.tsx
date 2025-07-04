@@ -1,16 +1,19 @@
 import './App.css'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, useLocation } from 'react-router-dom'
 
 function App() {
 
-  return (
-      <>
-          <nav>
-              <Link to={"/"}>Home</Link>
-              <Link to={"/clients"}>Clients</Link>
-          </nav>
-          <Outlet/>
-      </>
+    const location = useLocation()
+
+    return (
+        <>
+            <nav>
+                <Link to={"/"} className={location.pathname === "/" ? "navFocus" : ""}>Add client</Link>
+                <Link to={"/clients"} className={location.pathname === "/clients" ? "navFocus" : ""}>Clients list</Link>
+                <Link to={"/appointments"} className={location.pathname === "/appointments" ? "navFocus" : ""}>Appointments</Link>
+            </nav>
+            <Outlet/>
+        </>
     )
 }
 

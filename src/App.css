@@ -5,12 +5,15 @@
 
 body {
     background-color: #ffffff;
+    font-family: "Manrope", sans-serif;
 }
 a {
     text-decoration: none;
 }
-input, textarea {
-    display: block;
+a:focus {
+    outline: none;
+}
+input, textarea, button {
     margin-bottom: 5px;
     border: none;
     border-radius: 5px;
@@ -21,27 +24,84 @@ input, textarea {
 input:focus, textarea:focus {
     outline: 2px solid #fa8c82;
 }
-nav {
-    background-color: #e64c43;
-    padding: 20px;
-    padding-bottom: 0;
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #e64c43;
+    border-radius: 5px;
+    cursor: pointer;
+    vertical-align: middle;
 }
-nav > a {
-    padding: 15px;
-    padding-bottom: 1px;
-    border-radius: 5px 5px 0 0;
+input[type="checkbox"]:focus {
+    outline: none;
+}
+button {
+    width: 100%;
+    background-color: #e64c43;
     color: #ffffff;
 }
-nav > a:focus {
+nav {
+    background-color: #e64c43;
+    padding: 15px;
+}
+nav > a {
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    font-size: 12px;
+}
+.react-datepicker-wrapper {
+    width: 100%;
+    text-align: center;
+}
+.inline {
+    display: inline;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.navFocus {
     background-color: #ffffff;
     color: black;
+    border-bottom: 6px solid #ffffff;
 }
 .page {
     display: flex;
-    height: calc(var(--vh, 1vh) * 90);
+    height: calc(var(--vh, 1vh) * 85);
 }
 .pageBox {
     flex: 1;
     align-self: center;
     padding: 15px;
+}
+.client {
+    display: flex;
+    border-bottom: 2px solid #efefef;
+    font-size: 12px;
+    padding: 5px;
+}
+.client > p {
+    flex: 1;
+}
+.appointments {
+    font-size: 12px;
+    border: 2px solid #efefef;
+    border-radius: 5px;
+    background-color: #efefef;
+    padding: 2%;
+    margin-bottom: 5px;
+    width: 96%;
+}
+.appointments:focus {
+    border: 2px solid #fa8c82;
+}
+.name {
+    font-weight: bold;
+}
+.phone {
+    font-style: italic;
+}
+.date {
+    text-align: right;
+    font-weight: bold;
+    color: #e64c43;
 }

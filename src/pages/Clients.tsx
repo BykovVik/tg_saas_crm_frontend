@@ -3,18 +3,60 @@ import getClients from "../api/clientApi"
 
 const Clients = () => {
 
-    const[clients, setClients] = useState([])
+    const[_clients, setClients] = useState([])
 
     useEffect(() => {
         getClients().then((res) => setClients(res.data.json()))
     }, [])
 
     return (
-        <div>
-            <h1>Список клиентов</h1>
-            {clients.map((c) => (
-                <div>{c}</div>
-            ))}
+        <div className="page">
+            <div className="pageBox">
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+                <div className="client">
+                    <p className="name">Диего Мартинес</p>
+                    <p className="date">+380509873833</p>
+                </div>
+            </div>
         </div>
     )
 }
