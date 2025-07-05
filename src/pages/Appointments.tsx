@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import getClients from "../api/clientApi"
+import { getClients } from "../api/clientApi"
 
 const Appointments = () => {
 
